@@ -1,0 +1,5 @@
+node_modules/
+dist/
+PDFcom-win32-x64/
+my-electron-app/
+*.log

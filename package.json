@@ -1,0 +1,58 @@
+{
+  "name": "pdf-scroller",
+  "version": "1.0.1",
+  "description": "Auto-scrolling PDF viewer desktop app",
+  "main": "main.js",
+  "author": "Rushikesh Upare",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win --x64",
+    "publish": "electron-builder --win --x64 --publish always"
+  },
+  "build": {
+    "appId": "com.rushikeshupare.pdfscroller",
+    "productName": "PDF Scroller",
+    "copyright": "Copyright © 2025 Rushikesh Upare",
+    "directories": {
+      "buildResources": "assets",
+      "output": "dist"
+    },
+    "files": [
+      "index.html",
+      "style.css",
+      "renderer.js",
+      "main.js",
+      "pdfjs/**",
+      "assets/**"
+    ],
+    "extraMetadata": {
+      "version": "1.0.0"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "rushiking2905",
+        "repo": "pdfcom-updater"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^30.5.1",
+    "electron-builder": "^24.6.0"
+  }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Scroller</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Splash Animation -->
+  <div id="splash">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Internet Warning -->
+  <p id="internet-warning">⚠️ No internet connection. Please check your internet.</p>
+
+  <!-- Logo Screen -->
+  <div id="logo-screen">
+    <img src="./assets/logo.ico" alt="PDF Logo" class="logo" />
+    <h1>Welcome to PDF Scroller</h1>
+  </div>
+
+  <!-- Main App -->
+  <div id="app">
+    <h2>Upload your PDF</h2>
+    <input type="file" id="pdfUpload" accept="application/pdf" />
+    <p id="status">Waiting for upload...</p>
+
+    <div id="controls">
+      <label>Select Speed:</label>
+      <select id="speed">
+        <option value="0.5">0.5x</option>
+        <option value="0.7">0.7x</option>
+        <option value="1" selected>1x</option>
+        <option value="1.5">1.5x</option>
+        <option value="2">2x</option>
+        <option value="3">3x</option>
+        <option value="4">4x</option>
+        <option value="5">5x</option>
+        <option value="6">6x</option>
+        <option value="7">7x</option>
+      </select>
+      <button id="pauseBtn">Pause</button>
+    </div>
+
+    <div id="pdfViewer"></div>
+  </div>
+
+  <script src="pdfjs/pdf.js"></script>
+  <script>
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'pdfjs/pdf.worker.js';
+  </script>
+  <script src="renderer.js"></script>
+</body>
+</html>
