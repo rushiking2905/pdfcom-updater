@@ -6,17 +6,17 @@ function createWindow() {
     width: 1000,
     height: 800,
     title: 'PDF Scroller',
+    icon: path.join(__dirname, 'assets', 'logo.ico'), // 🟢 ICON added here
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
-      preload: path.join(__dirname, 'preload.js') // if needed
+      preload: path.join(__dirname, 'preload.js')
     },
-    show: false // initially hide the window
+    show: false
   });
 
   win.loadFile('index.html');
 
-  // Show window only when it's fully ready to avoid white flash
   win.once('ready-to-show', () => {
     win.show();
   });

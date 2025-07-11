@@ -13,7 +13,7 @@
   "build": {
     "appId": "com.rushikeshupare.pdfscroller",
     "productName": "PDF Scroller",
-    "copyright": "Copyright © 2025 Rushikesh Upare",
+    "copyright": "Copyright © 2025 Rushikesh",
     "directories": {
       "buildResources": "assets",
       "output": "dist"
@@ -24,7 +24,8 @@
       "renderer.js",
       "main.js",
       "pdfjs/**",
-      "assets/**"
+      "assets/**",
+      "preload.js"
     ],
     "extraMetadata": {
       "version": "1.0.0"
@@ -43,7 +44,7 @@
           "arch": ["x64"]
         }
       ],
-      "icon": "assets/icon.ico"
+      "icon": "assets/logo.ico" 
     },
     "nsis": {
       "oneClick": false,
