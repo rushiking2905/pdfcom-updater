@@ -1,6 +1,6 @@
 {
   "name": "pdf-scroller",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Auto-scrolling PDF viewer desktop app",
   "main": "main.js",
   "author": "Rushikesh Upare",
