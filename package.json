@@ -1,6 +1,6 @@
 {
   "name": "pdf-scroller",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Auto-scrolling PDF viewer desktop app",
   "main": "main.js",
   "author": "Rushikesh Upare",
@@ -27,9 +27,6 @@
       "assets/**",
       "preload.js"
     ],
-    "extraMetadata": {
-      "version": "1.0.0"
-    },
     "publish": [
       {
         "provider": "github",
@@ -44,13 +41,17 @@
           "arch": ["x64"]
         }
       ],
-      "icon": "assets/logo.ico" 
+      "icon": "assets/logo.ico"
     },
     "nsis": {
       "oneClick": false,
       "perMachine": false,
       "allowToChangeInstallationDirectory": true
     }
+  },
+  "dependencies": {
+    "electron-updater": "^6.1.1",
+    "electron-log": "^5.0.0"
   },
   "devDependencies": {
     "electron": "^30.5.1",
